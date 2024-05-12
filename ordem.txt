@@ -1,0 +1,9 @@
+tesoura: papel e lagarto
+
+papel: pedra e spock
+
+pedra: lagarto e tesoura
+
+lagarto: spock e papel
+
+spock: tesoura e pedra
