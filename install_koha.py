@@ -2,10 +2,8 @@ import subprocess as sp
 import sys
 import socket
 
-
 COLOR_PASSED = '\033[92m'
 COLOR_END = '\033[0m'
-
 
 def edit(filename, actual_txt, replace_txt):
     with open(filename, "r") as file:
@@ -16,19 +14,15 @@ def edit(filename, actual_txt, replace_txt):
     with open(filename, "w") as file:
         file.write(filedata)
 
-
 def append_text(filename, text):
     with open(filename, "a") as file:
         file.write(text)
 
-
 def local_ip():
     return socket.gethostbyname(socket.gethostname())
 
-
 def ip():
     return (([ip for ip in socket.gethostbyname_ex(socket.gethostname())[2] if not ip.startswith("127.")] or [[(s.connect(("8.8.8.8", 53)), s.getsockname()[0], s.close()) for s in [socket.socket(socket.AF_INET, socket.SOCK_DGRAM)]][0][1]]) + ["no IP found"])[0]
-
 
 def comands():
     cmd_list = [
