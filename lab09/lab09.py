@@ -1,3 +1,4 @@
+# finalizar 
 def scan_ambiente(comodo):
     linha = len(comodo)
     coluna = len(comodo[0])
